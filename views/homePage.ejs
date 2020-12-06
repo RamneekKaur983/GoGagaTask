@@ -1,0 +1,67 @@
+<%- include('header.ejs') %>
+
+<div class="myDiv">
+
+    <h1>Search</h1>
+<form  method="POST" action="/search">
+
+    <input type="text" placeholder="Enter the Name or Location" name="search">
+    <button type="submit">Search</button>
+</form>
+
+<% if(Search.length>0){ %>
+
+    <h4><%= Search %></h4>
+     <h4><% Search[1] %></h4>
+
+<% } %>
+
+</div>
+
+
+
+<div>
+    <h1>List Of Entries</h1>
+
+    <ol>
+    
+        <% items.forEach(function(item) { %>
+    
+            <li>
+    
+            
+            <p>
+            Name:
+            <%= item.name %>
+            <br>
+            Location:
+            <%=item.location %>
+            </p>
+        </li>
+            
+            
+    
+            <% }) %>
+    </ol>
+       
+
+</div>
+
+
+
+<div class="myDiv" id="footer">
+    <h1>Add New Entry</h1>
+
+    <form method="POST" action="/create">
+    
+    <input type="text"  name="name" placeholder="Enter Name">
+    <input type="text"  name="location" placeholder="Enter Location">
+    <button type="submit">Submit</button>
+    
+    
+    </form>
+</div>
+
+
+
+<%- include ('footer.ejs') %>

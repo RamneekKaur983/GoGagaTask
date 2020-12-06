@@ -1,0 +1,15 @@
+.myDiv {
+    border: 5px outset #739900;
+    background-color: #d9ff66;
+    text-align: center;
+  }
+  
+  body
+  {
+      background-color: #f9ffe6;
+  }
+  #footer {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
